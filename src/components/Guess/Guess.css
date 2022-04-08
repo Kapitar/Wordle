@@ -1,0 +1,106 @@
+.game {
+    margin-left: 150px;
+}
+
+.tile-container div {
+    display: flex;
+}
+
+.tile-container .tile {
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    text-transform: uppercase;
+    width: 62px;
+    height: 62px;
+    border: 2px solid rgb(212, 212, 212);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.tile-container .tile.typed {
+    border: 2px solid rgb(115, 115, 115);
+    animation-name: PopIn;
+    animation-duration: 100ms;
+}
+
+@keyframes PopIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    40% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+.tile-container .tile.flip {
+    color: #fff;
+    animation: 0.5s linear FlipIn;
+}
+
+.grey-flip {
+    background-color: #787c7e !important;
+    border: none !important;
+}
+
+.yellow-flip {
+    background-color: #c9b458 !important;
+    border: none !important;
+}
+
+.green-flip {
+    background-color: #6aaa64 !important;
+    border: none !important;
+}
+
+@keyframes FlipIn {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.keyboard {
+    width: 520px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.keyboard_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.keyboard_container button {
+    width: 43px;
+    height: 58px;
+    border-radius: 4px;
+    border: 0;
+    margin: 4px;
+    background: #d3d6da;
+    color: #1a1a1b;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.keyboard_container button:nth-child(11) {
+    margin-left: 30px;
+}
+
+.keyboard_container button:nth-child(20),
+.keyboard_container button:nth-child(28) {
+    width: 68px;
+}
